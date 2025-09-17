@@ -1,0 +1,90 @@
+.click {
+    background-color: brown;
+    Color: yellow;
+    Padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 2s ease,transform 1s ease-in-out;
+}
+
+.click:hover {
+    background-color: rgb(122, 122, 13);
+    transform: scale(1.1); 
+}
+
+.cube {
+    background: rgb(59, 226, 17);
+    border-radius: 9px;
+    width: 115px;
+    height: 115px;
+    cursor: pointer;
+    line-height: 115px;
+    text-align: center;
+    transition-property: background;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.cube:hover{
+    background: purple;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius: 65%;
+    position: relative;
+    animation: bounce 0.01s infinite ease-in-out;
+}
+
+@keyframes bounce{
+    0%, 100% { top: 0; }
+    50% { top: 250px; }
+}
+
+.stage {
+    min-width: 400px;
+    height: 300px;
+    border: 3px solid blueviolet;
+    border-radius: 4px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.stage:hover .ball-2 {
+    animation: slide 0.1s infinite ease-in-out alternate;
+}
+
+.ball-2{
+    background: purple;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+}
+
+@keyframes slide {
+    0% { left: 0; top: 0; }
+    50% { left: 240px; top: 200px; }
+    100% { left: 490px; top: 0; }
+}
+
+.cube-2{
+    width: 85px;
+    height: 100px;
+    background: peru;
+    border-radius: 10px;
+    position: relative;
+}
+
+.animate{
+    animation: moveRight 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveRight {
+    from { left: 0; }
+    to { left: 1000px; }
+}
